@@ -14,6 +14,7 @@ import Qeydiyyat from "./pages/Qeydiyyat";
 import Iron from "./pages/Iron";
 import Whatsapp from "./components/Whatsapp";
 
+
 function App() {
   return (
     <>
@@ -30,6 +31,7 @@ function App() {
     <Route path="/utuler" element={<Iron />} />
     <Route path="/details/:id" element={<Details />} />
     <Route path="/qeydiyyat" element={<Qeydiyyat />} />
+
   </Routes> 
   <Whatsapp/>
   <Footer/>

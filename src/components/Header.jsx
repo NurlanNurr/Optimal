@@ -61,6 +61,7 @@ const Header = () => {
                   <SearchInput />
                   <div className='absolute top-1/2  transform -translate-y-1/2 right-4' ><AiOutlineSearch size="20px" color='rgb(220 38 38)' /></div>
                 </div>
+                
               </div>
               <div className="nav_bottom_right flex gap-x-3  items-center">
                 <div className='relative w-10 h-10  '>
@@ -78,9 +79,12 @@ const Header = () => {
             </div>
             <BurgerMenu pageWrapId={"page-wrap"} outerContainerId={"App"} />
           <div className=" relative input lg:hidden w-full justify-end flex pr-8 ">
+
             <SearchInput />
             <div className='absolute top-1/2  transform -translate-y-1/2 right-4 lg:block hidden' ><AiOutlineSearch size="20px" color='rgb(220 38 38)' /></div>
           </div>
+
+          
           </Pagecontainer>
         </div>
 

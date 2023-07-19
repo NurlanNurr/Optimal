@@ -61,7 +61,7 @@ else{
             className='   placeholder:text-base border-2 border-red-600 text-gray-900 text-sm rounded-full  focus:border-red-600  lg:w-[514px] w-full h-10  p-2.5 '
           />
          
-                <div style={borderedDivStyle}  className="lg:w-[514px]  border-red-800 border  gap-[50px]">
+                <div style={borderedDivStyle}  className="lg:w-[514px] bg-white border-red-800 border z-[99999] absolute  gap-[50px]">
             {filteredData.map((item) => (
               <SearchCart
                 productName={item.name}

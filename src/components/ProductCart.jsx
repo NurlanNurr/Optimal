@@ -1,7 +1,8 @@
 import React from 'react'
-
+import Swal from 'sweetalert2'
 import "../assets/styles/components/productcar.scss"
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 export const ProductCard = ({
   id,
@@ -13,6 +14,24 @@ export const ProductCard = ({
   oldprice,
   showAddButton = true,
   showDeleteButton = false, }) => {
+
+    const [isButtonClicked, setButtonClicked] = useState(false);
+
+    const Alert = () => {
+      Swal.fire({
+        position: "top-center",
+        icon: "success",
+        title: "Səbətə əlavə olundu",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    };
+  
+    const handleButtonClick = () => {
+      setButtonClicked(true);
+      onClick();
+      Alert();
+    };
 
   return (
 
@@ -56,7 +75,7 @@ export const ProductCard = ({
         </div>
 
         <div className="overlay_button hidden ">
-          <button onClick={onClick} className='px-4 py-1 bg-lime-500 rounded-full text-white'>Səbətə əlavə et</button>
+          <button onClick={handleButtonClick} className='px-4 py-1 bg-lime-500 rounded-full text-white'>Səbətə əlavə et</button>
         </div>
 
       </div>
