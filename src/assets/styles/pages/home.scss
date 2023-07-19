@@ -1,0 +1,11 @@
+.list_meis {
+    &:hover { 
+       
+        .list_meis_child {
+            display: block;
+            color: black;
+          background-color: white;
+          border: 1px solid black;
+        }
+    }}
+    

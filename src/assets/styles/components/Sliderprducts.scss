@@ -1,0 +1,52 @@
+.sliderproduct_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 1s;
+    :hover{
+        cursor: pointer;
+       
+            .overlay_for_img{
+                display: block;
+                // border-radius: 100% ;
+                transition: all ease 0.4s;
+            }
+            .overlay_top{
+                transition: all 1s;
+                border-top-right-radius: 9999px;
+                border-top-left-radius: 9999px;
+            }
+           .overlay_bottom{
+           
+            border-bottom-right-radius: 9999px;
+            border-bottom-left-radius: 9999px;
+           }
+           .products_text{
+            display: none;
+           }
+
+           .overlay_button{
+            display: block;
+           }
+            img{
+                transition: all ease 0.2s;
+                border-radius: 100%;
+            }
+    
+        .sliderproduct_main2{
+           
+            .sliderproduct_img{
+                
+            }
+
+            .overlay_top{
+
+            }
+        }
+     
+       
+    }
+    .sliderproduct_img{
+        transition: all ease 1s;
+    }
+}
