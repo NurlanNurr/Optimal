@@ -1,25 +1,14 @@
 import React from "react";
 import { slide as Menu } from "react-burger-menu";
-
+import { Link } from "react-router-dom";
 
 export default () => {
   return (
     <Menu>
-      <a className="menu-item" href="/">
-        Home
-      </a>
-
-      <a className="menu-item" href="/burgers">
-        Burgers
-      </a>
-
-      <a className="menu-item" href="/pizzas">
-        Pizzas
-      </a>
-
-      <a className="menu-item" href="/desserts">
-        Desserts
-      </a>
+      <li><Link to="/kampaniyalar">Kampaniyalar</Link></li>
+      <li><Link to="/brendlər">Brendlər</Link></li>
+      <li><Link to="/filiallar">Filiallar</Link></li>
+      <li><Link to="/əlaqə">Əlaqə</Link></li>
     </Menu>
   );
 };

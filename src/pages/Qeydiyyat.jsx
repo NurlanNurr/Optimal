@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 const Qeydiyyat = () => {
   return (
     <Link to="/home">
+      
         <QeydiyyatForm/>  
     </Link>
     )
