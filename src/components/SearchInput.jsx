@@ -35,7 +35,7 @@ else{
     maxHeight: "270px",
     overflowY: "scroll",
     border: "1px solid #red-800",
-    display: filteredData.length === 0 ? "none" : "flex" ,
+    display: filteredData.length === 0 ? "none" : "block" ,
    
   };
 
@@ -58,15 +58,17 @@ else{
             name="search"
             placeholder="Axtar..."
             onChange={searchData}
-            className='   placeholder:text-base border-2 border-red-600 text-gray-900 text-sm rounded-full  focus:border-red-600  lg:w-[514px] w-full h-10  p-2.5 '
+            className='   placeholder:text-base border-2 border-red-600 text-gray-900 text-sm rounded-full  focus:border-red-600  lg:w-[260px] w-full h-10  p-2.5 '
           />
          
-                <div style={borderedDivStyle}  className="lg:w-[514px]  border-red-800 border  gap-[50px]">
+                <div style={borderedDivStyle}  className="lg:w-[260px] bg-white border-red-800 border z-[99999] absolute  gap-[50px]">
             {filteredData.map((item) => (
               <SearchCart
                 productName={item.name}
                 imageUrl={item.imageurl}
-               
+                id={item.id}
+                price={item.price}
+                oldprice={item.oldprice}
               />
             ))}
           </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Pagecontainer from "./Pagecontainer/Pageontainer";
 
 const QeydiyyatForm = () => {
   const [name, setName] = useState("");
@@ -41,6 +42,7 @@ const QeydiyyatForm = () => {
     }
   };
   return (
+    <Pagecontainer>
     <div>
       <form onSubmit={handleSubmit} className="pt-[30px]">
         <h1 className="pb-[20px] ">Şəxsi məlumatlar</h1>
@@ -175,13 +177,14 @@ const QeydiyyatForm = () => {
         <div className="w-[100%] flex justify-end mt-[20px]">
           <button
             type="submit"
-            className="border-[1px] p-[6px] bg-[#f15803] text-white mt-[-16px]"
+            className="border-[1px] p-[6px] bg-red-600 text-white mt-[-16px]"
           >
             Təstiqlə
           </button>
         </div>
       </form>
     </div>
+    </Pagecontainer>
   );
 };
 

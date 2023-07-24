@@ -65,7 +65,7 @@ export default function Home() {
           {/* ======== discount TAB ======== */}
           {activeTab === "Endirimdə Olanlar" && (
             
-            <div className="lg:w-[1170px] flex flex-wrap lg:gap-x-4 lg:gap-y-6 my-0 mx-auto w-full justify-center pr-[15px] pl-[15px]  ">
+            <div className="lg:w-[1170px] flex flex-wrap lg:gap-x-11 lg:gap-y-6 my-0 mx-auto w-full justify-center pr-[15px] pl-[15px]  ">
               {result?.length > 0 &&
                 result.map((product) => (
                   
@@ -104,7 +104,7 @@ export default function Home() {
 
           {/* ======== newwwproduct TAB ======== */}
           {activeTab === "Yeni Məhsullar" && (
-            <div className="lg:w-[1170px] flex flex-wrap lg:gap-x-4 lg:gap-y-6 my-0 mx-auto w-full justify-center pr-[15px] pl-[15px]  ">
+            <div className="lg:w-[1170px] flex flex-wrap lg:gap-x-11 lg:gap-y-6 my-0 mx-auto w-full justify-center pr-[15px] pl-[15px]  ">
               {result2?.length > 0 &&
                 result2.map((product) => (
                   <ProductCard
@@ -141,7 +141,7 @@ export default function Home() {
 
           {/* ======== mostviewed TAB ======== */}
           {activeTab === "Ən Çox Baxılanlar" && (
-            <div className="lg:w-[1170px] flex flex-wrap lg:gap-x-4 lg:gap-y-6 my-0 mx-auto w-full justify-center pr-[15px] pl-[15px]  ">
+            <div className="lg:w-[1170px] flex flex-wrap lg:gap-x-11 lg:gap-y-6 my-0 mx-auto w-full justify-center pr-[15px] pl-[15px]  ">
               {result3?.length > 0 &&
                 result3.map((product) => (
                   <ProductCard
@@ -179,7 +179,7 @@ export default function Home() {
 
           {/* ======== mostliked TAB ======== */}
           {activeTab === "Ən Çox Bəyənilənlər" && (
-            <div className="lg:w-[1170px] flex flex-wrap lg:gap-x-4 lg:gap-y-6 my-0 mx-auto w-full justify-center pr-[15px] pl-[15px]  ">
+            <div className="lg:w-[1170px] flex flex-wrap lg:gap-x-11 lg:gap-y-6 my-0 mx-auto w-full justify-center pr-[15px] pl-[15px]  ">
               {result4?.length > 0 &&
                 result4.map((product) => (
                   <ProductCard

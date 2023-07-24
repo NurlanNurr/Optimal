@@ -66,30 +66,30 @@ const Sobalar = () => {
       <Pagecontainer>
 
 
-        <div className="w-full flex">
-          <div className="sort_parameters w-1/4 flex flex-col gap-[20px] ">
+        <div className=" w-full flex  ">
+          <div className="sort_parameters lg:w-1/4 w-2/4 lg:ml-0 ml-6 lg:mt-0  mt-4 flex flex-col gap-[20px] ">
 
-          <aside>
-  <div>
-    <ul>
-      <li class="text-[#222222] text-lg">QİYMƏT</li>
-    </ul>
-    <div class="filter w-3/4 price flex flex-col">
-      <input
-        type="range"
-        min="199"
-        max="999"
-        value={price}
-        onInput={handlePriceInput}
-      
-      />
-      <div class="flex justify-between">
-        <h1>199</h1>
-        <h1> {price}</h1>
-      </div>
-    </div>
-  </div>
-</aside>
+            <aside>
+              <div>
+                <ul>
+                  <li class="text-[#222222] text-lg">QİYMƏT</li>
+                </ul>
+                <div class="filter w-3/4 price flex flex-col">
+                  <input
+                    type="range"
+                    min="199"
+                    max="999"
+                    value={price}
+                    onInput={handlePriceInput}
+
+                  />
+                  <div class="flex justify-between">
+                    <h1>199</h1>
+                    <h1> {price}</h1>
+                  </div>
+                </div>
+              </div>
+            </aside>
 
             <div className=" flex flex-col items-start">
               <p className="text-[#222222] text-lg">RƏNG</p>
@@ -107,6 +107,8 @@ const Sobalar = () => {
               <button className="text-[#4f4f4f] text-base" onClick={showAllProducts}>-Bütün məhsullar</button>
             </div>
           </div>
+
+
           <div className="w-3/4 flex flex-wrap gap-[50px]">
             {filteredData.map((item) => (
               <ProductCard

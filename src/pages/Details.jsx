@@ -49,7 +49,7 @@ const Details = ({
         <AiFillCaretRight />
       </li>
       <li>
-        <Link to="/" className="text-[#f15803]">
+        <Link to="/" className="text-red-600">
           {product.name}
         </Link>
       </li>

@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Swal from 'sweetalert2';
 
 function Form() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [letter, setLetter] = useState("");
+  const [MyData, SetMyData] = useState([]);
   const [notification, setNotification] = useState("");
   const [notificationn, setNotificationn] = useState("");
   const [notificationnn, setNotificationnn] = useState("");
-  const [notificationnnn, setNotificationnnn] = useState("");
+  const [formSubmitted, setFormSubmitted] = useState(false); // New state variable
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,16 +23,35 @@ function Form() {
     if (!letter) {
       setNotificationnn("Məktub 10 ilə 3000 simvol arasında olmalıdır!");
     } else {
+      // Form submission is successful
       setName("");
       setEmail("");
       setLetter("");
-      setNotificationnnn("Form tesdiqlendi");
+      setFormSubmitted(true);
     }
+  };
+
+  // useEffect to show the alert when formSubmitted becomes true
+  useEffect(() => {
+    if (formSubmitted) {
+      Alert();
+      setFormSubmitted(false); // Reset formSubmitted for future submissions
+    }
+  }, [formSubmitted]);
+
+  const Alert = () => {
+    Swal.fire({
+      position: 'top-center',
+      icon: 'success',
+      title: 'Form təstiqləndi',
+      showConfirmButton: false,
+      timer: 1500
+    });
   };
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}    action="https://formsubmit.co/vusal.osmanov66@gmail.com"   method="POST">
         <div className="mb-[15px] text-right">
           <label htmlFor="name">* Adınız: </label>
           <input
@@ -80,13 +101,13 @@ function Form() {
         <div className="w-[100%] flex justify-end">
           <button
             type="submit"
-            className="border-[1px] p-[6px] bg-[#f15803] text-white mt-[-16px]"
+            className="border-[1px] p-[6px] bg-red-600 text-white mt-[-16px]"
+            onClick={handleSubmit}
           >
             Təstiqlə
           </button>
         </div>
       </form>
-      {notificationnnn && <p className="text-center">{notificationnnn}</p>}
     </div>
   );
 }

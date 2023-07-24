@@ -26,7 +26,7 @@ const Əlaqə = () => {
             <div className="lg:w-[25%] w-[100%] justify-center flex ">
             </div>
             <div>
-              <strong>mgstore.az</strong>
+              <strong>optimal.az</strong>
               <br />
               <address >
               Xətai rayonu,Afiyəddin Cəlilov 27A, Park Azure 2-ci</address>
@@ -34,7 +34,7 @@ const Əlaqə = () => {
             <div>
               <strong>Telefon</strong>
               <br />
-              *4848
+              *6767
             </div>
             <div>
               <strong>İş vaxtı</strong>
@@ -47,7 +47,7 @@ const Əlaqə = () => {
           <Form />
         </div>
         <div className="border-[1px] mt-[50px] mb-[40px]">
-          {/* <Swiperss /> */}
+          
         </div>
 
       </div></>
